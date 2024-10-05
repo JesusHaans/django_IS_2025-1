@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+    <html>
+    <head>
+        <meta charset="utf-8"/>
+        <meta name="description" content="Resumen del contenido de la página">   
+        <title>Título de la página</title>
+        <link rel="stylesheet" href="css/estilo.css" type="text/css"/>
+        <script type="text/javascript" src="js/codigo.js"></script>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+        <header>cabecera</header>
+        <nav>
+            enlace1
+            enlace2
+        </nav>
+        <main>
+            <h1>Lista de productos</h1>
+            <ul>
+                {% for product in lista %}
+                <li>
+                    <p>{{ product.nombre }}</p>
+                    <p>{{ product.precio }}</p>
+                </li>
+                {% endfor %}
+            </ul>
+        </main>
+        <footer> © pie de la página </footer>
+    </body>
+    </html>
